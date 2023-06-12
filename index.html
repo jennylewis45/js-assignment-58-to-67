@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <div>
+    <h1> DOM </h1>
+    <div id="form-content" class="content">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" />
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" />
+      <label for="email">Email</label>
+      <input type="text" id="email" />
+    </div>
+    <div id="main-content" class="content">
+      <p class="render">First Name : Alex</p>
+      <p class="render" id="lastName">Last Name: Bank</p>
+      <p class="render">Email : alexbank@example.com</p>
+      <p class="render">Country : Pakistan</p>
+      <p class="render">Contact : +92 300 1234567</p>
+    </div>
+  </div>
+
+  <script>
+    var mainContentElement = document.getElementById("main-content");
+var children = mainContentElement.children;
+
+for (var i = 0; i < children.length; i++) {
+  document.write(children[i]);
+  document.write("<br>")
+}
+
+var renderElements = document.getElementsByClassName("render");
+for (var i = 0; i < renderElements.length; i++) {
+  document.write(renderElements[i].innerHTML);
+  document.write("<br>")
+
+}
+
+var firstNameInput = document.getElementById("first-name");
+firstNameInput.value = "Alex";
+
+var lastNameInput = document.getElementById("last-name");
+lastNameInput.value = "Bank";
+
+var emailInput = document.getElementById("email");
+emailInput.value = "alexbank@example.com";
+
+
+
+   // i. What is node type of element having id "form-content".
+   var formContentElement = document.getElementById("form-content");
+    document.write("Node type of element with id 'form-content':", formContentElement.nodeType);
+    document.write("<br>")
+
+
+    // ii. Show node type of element having id "lastName" and its child node.
+    var lastNameElement = document.getElementById("lastName");
+    document.write("Node type of element with id 'lastName':", lastNameElement.nodeType);
+    document.write("<br>")
+
+    document.write("Child node of element with id 'lastName':", lastNameElement.firstChild.nodeType);
+    document.write("<br>")
+
+
+    // iii. Update child node of element having id "lastName".
+    lastNameElement.firstChild.nodeValue = "New Last Name: Updated Bank";
+
+    // iv. Get First and last child of id "main-content".
+    var mainContentElement = document.getElementById("main-content");
+    var firstChild = mainContentElement.firstElementChild;
+    var lastChild = mainContentElement.lastElementChild;
+    document.write("First child of element with id 'main-content':", firstChild);
+    document.write("<br>")
+
+    document.write("Last child of element with id 'main-content':", lastChild);
+    document.write("<br>")
+
+
+    // v. Get next and previous siblings of id "lastName".
+    var nextSibling = lastNameElement.nextSibling;
+    var previousSibling = lastNameElement.previousSibling;
+    document.write("Next sibling of element with id 'lastName':", nextSibling);
+    document.write("<br>")
+
+    document.write("Previous sibling of element with id 'lastName':", previousSibling);
+    document.write("<br>")
+
+
+    // vi. Get parent node and node type of element having id "email".
+    var emailElement = document.getElementById("email");
+    var parentNode = emailElement.parentNode;
+    document.write("Parent node of element with id 'email':", parentNode);
+    document.write("<br>")
+
+    document.write("Node type of element with id 'email':", emailElement.nodeType);
+  </script>
+</body>
+</html> 
+
+
+
+
+
+ 
