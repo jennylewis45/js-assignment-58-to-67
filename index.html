@@ -53,13 +53,11 @@ emailInput.value = "alexbank@example.com";
 
 
 
-   // i. What is node type of element having id "form-content".
    var formContentElement = document.getElementById("form-content");
     document.write("Node type of element with id 'form-content':", formContentElement.nodeType);
     document.write("<br>")
 
 
-    // ii. Show node type of element having id "lastName" and its child node.
     var lastNameElement = document.getElementById("lastName");
     document.write("Node type of element with id 'lastName':", lastNameElement.nodeType);
     document.write("<br>")
@@ -68,10 +66,8 @@ emailInput.value = "alexbank@example.com";
     document.write("<br>")
 
 
-    // iii. Update child node of element having id "lastName".
     lastNameElement.firstChild.nodeValue = "New Last Name: Updated Bank";
 
-    // iv. Get First and last child of id "main-content".
     var mainContentElement = document.getElementById("main-content");
     var firstChild = mainContentElement.firstElementChild;
     var lastChild = mainContentElement.lastElementChild;
@@ -82,7 +78,6 @@ emailInput.value = "alexbank@example.com";
     document.write("<br>")
 
 
-    // v. Get next and previous siblings of id "lastName".
     var nextSibling = lastNameElement.nextSibling;
     var previousSibling = lastNameElement.previousSibling;
     document.write("Next sibling of element with id 'lastName':", nextSibling);
@@ -92,7 +87,6 @@ emailInput.value = "alexbank@example.com";
     document.write("<br>")
 
 
-    // vi. Get parent node and node type of element having id "email".
     var emailElement = document.getElementById("email");
     var parentNode = emailElement.parentNode;
     document.write("Parent node of element with id 'email':", parentNode);
